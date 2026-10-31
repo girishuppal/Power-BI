@@ -51,11 +51,6 @@
           "name": "Fluent2-CY26SU10",
           "path": "BaseThemes/Fluent2-CY26SU10.json",
           "type": "BaseTheme"
-        },
-        {
-          "name": "usa.states.topo",
-          "path": "Shapemaps/usa.states.topo.json",
-          "type": "ShapeMap"
         }
       ]
     }

@@ -1,0 +1,15 @@
+let
+  Source = #table(
+  {"Name","Age","Salary"},
+  {
+
+  {"John", 23,5600},
+    {"Jim", 34,9000},
+    {"Joseph", 30,16000}
+  
+  
+  }
+  
+  )
+in
+  Source
