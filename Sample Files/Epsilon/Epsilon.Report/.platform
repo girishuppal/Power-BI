@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Epsilon"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fa829a48-8889-4c64-96f4-d3ad6100b632"
+  }
+}
