@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Gamma Multi Source Data Connectivity"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ee54e07f-7e58-44da-8f2d-5564faccd848"
+  }
+}

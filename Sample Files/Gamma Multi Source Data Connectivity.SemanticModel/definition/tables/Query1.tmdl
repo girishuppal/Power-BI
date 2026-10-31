@@ -1,0 +1,55 @@
+table Query1
+	lineageTag: 39d8f4e7-d6c8-4e80-80dd-4b9b52c5dc79
+
+	column Name
+		dataType: string
+		lineageTag: 14681302-0a2b-4d49-a0b5-899d27151f9b
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: int64
+		formatString: 0
+		lineageTag: 994b9a25-ed60-43a6-9426-2c278a778ab5
+		summarizeBy: sum
+		sourceColumn: Age
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Salary
+		dataType: int64
+		formatString: 0
+		lineageTag: 74b4ff0d-b5c9-4e65-b183-29924c63130c
+		summarizeBy: sum
+		sourceColumn: Salary
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Query1 = m
+		mode: import
+		source = ```
+				let
+				  Source = #table(
+				  {"Name","Age","Salary"},
+				  {
+				
+				  {"John", 23,5600},
+				    {"Jim", 34,9000},
+				    {"Joseph", 30,16000}
+				  
+				  
+				  }
+				  
+				  )
+				in
+				  Source
+				```
+
+	annotation PBI_ResultType = Table
+

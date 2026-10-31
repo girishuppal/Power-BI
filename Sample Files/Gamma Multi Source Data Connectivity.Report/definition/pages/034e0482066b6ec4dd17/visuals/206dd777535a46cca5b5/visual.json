@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "206dd777535a46cca5b5",
+  "position": {
+    "x": 253.86018237082067,
+    "y": 411.42857142857144,
+    "z": 0,
+    "height": 382.24924012158056,
+    "width": 1501.2765957446809,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Multi Source",
+                    "textStyle": {
+                      "fontSize": "42pt",
+                      "color": "#d64550"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Data ",
+                    "textStyle": {
+                      "fontSize": "96pt"
+                    }
+                  },
+                  {
+                    "value": "Connectivity",
+                    "textStyle": {
+                      "fontSize": "96pt",
+                      "color": "#744ec2"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
