@@ -1,0 +1,104 @@
+table Product
+	lineageTag: 14bb1096-e9ca-4865-b3c7-87810b986e03
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: a1c2ee47-365d-49b2-b6d8-beced3b7f095
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKU
+		dataType: string
+		lineageTag: 59a09d36-ee37-4bf8-9010-23214e996226
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product
+		dataType: string
+		lineageTag: 2b0ebc7e-4362-4997-a61e-257085ffbb50
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Standard Cost'
+		dataType: double
+		lineageTag: b2d4903b-0357-4edf-a06e-626e1edd3927
+		summarizeBy: none
+		sourceColumn: Standard Cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Color
+		dataType: string
+		lineageTag: 34986514-3b4d-4a07-890c-c15a01144ac1
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'List Price'
+		dataType: double
+		lineageTag: 6c851295-27c3-4662-b442-2e9ca2cc4019
+		summarizeBy: none
+		sourceColumn: List Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Model
+		dataType: string
+		lineageTag: f5becba8-facf-454f-a73d-c8013675813c
+		summarizeBy: none
+		sourceColumn: Model
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subcategory
+		dataType: string
+		lineageTag: 37982143-ced1-4920-86a0-b217e655015c
+		summarizeBy: none
+		sourceColumn: Subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 8e38021f-7a49-4bb2-96d9-c9f3bcbf49dc
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Category Hierarchy'
+		lineageTag: ed00ba29-2fa9-46c9-ab1f-dde4afbf76f0
+
+		level Category
+			lineageTag: 6ac04f5c-532b-4de2-875a-a7b75b8c7a21
+			column: Category
+
+		level Subcategory
+			lineageTag: 7638668d-fd27-401d-be14-88a3547222be
+			column: Subcategory
+
+	partition Product = m
+		mode: import
+		source =
+				let
+				  Source = Excel.Workbook(File.Contents("C:\GIRISH\CODE\GitHubDesktop\Power-BI-File-Formats\DataSource\AdventureWorks Sales.xlsx"), null, true),
+				  #"Navigation 1" = Source{[Item = "Product", Kind = "Sheet"]}[Data],
+				  #"Promoted headers" = Table.PromoteHeaders(#"Navigation 1", [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"ProductKey", Int64.Type}, {"SKU", type text}, {"Product", type text}, {"Standard Cost", type number}, {"Color", type text}, {"List Price", type number}, {"Model", type text}, {"Subcategory", type text}, {"Category", type text}}, "en-US")
+				in
+				  #"Changed column type"
+
+	annotation PBI_ResultType = Table
+

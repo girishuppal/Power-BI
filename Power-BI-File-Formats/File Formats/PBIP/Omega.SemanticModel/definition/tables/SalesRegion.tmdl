@@ -1,0 +1,49 @@
+table SalesRegion
+	lineageTag: 137741af-1f2d-4bc0-afe6-100394d683ba
+
+	column SalesTerritoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 170f74bb-1938-4a89-a952-c5a360a65346
+		summarizeBy: none
+		sourceColumn: SalesTerritoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: c8a06d5c-a97d-452e-8951-226e99f4565f
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 5f798422-7716-4020-8159-59f817e0b766
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Group
+		dataType: string
+		lineageTag: 8980086c-a135-4aee-9588-c017a0590098
+		summarizeBy: none
+		sourceColumn: Group
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SalesRegion = m
+		mode: import
+		source =
+				let
+				  Source = Excel.Workbook(File.Contents("C:\GIRISH\CODE\GitHubDesktop\Power-BI-File-Formats\DataSource\AdventureWorks Sales.xlsx"), null, true),
+				  #"Navigation 1" = Source{[Item = "SalesRegion", Kind = "Sheet"]}[Data],
+				  #"Promoted headers" = Table.PromoteHeaders(#"Navigation 1", [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"SalesTerritoryKey", Int64.Type}, {"Region", type text}, {"Country", type text}, {"Group", type text}}, "en-US")
+				in
+				  #"Changed column type"
+
+	annotation PBI_ResultType = Table
+

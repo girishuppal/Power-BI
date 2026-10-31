@@ -1,0 +1,31 @@
+table 'Measure Table'
+	lineageTag: 549538a2-3644-47f8-994b-333d5698a82a
+
+	measure _M_TotalSales = sum(Sales[Sales Amount])
+		lineageTag: 6f40e48f-0c6e-4b5e-882d-10a3b1d2171d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column1
+		dataType: string
+		isHidden
+		lineageTag: 6830e315-39bd-42e7-98c0-34b4f9353a15
+		summarizeBy: none
+		sourceColumn: Column1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Measure Table' = m
+		mode: import
+		source =
+				let
+				  Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t])
+				in
+				  Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

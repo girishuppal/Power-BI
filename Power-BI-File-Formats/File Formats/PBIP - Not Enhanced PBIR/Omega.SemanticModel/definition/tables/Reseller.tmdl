@@ -1,0 +1,81 @@
+table Reseller
+	lineageTag: 8348d367-91df-48da-825b-320f76a251b1
+
+	column ResellerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 39dde402-3e9c-42b0-b2b2-4647d700741d
+		summarizeBy: none
+		sourceColumn: ResellerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reseller ID'
+		dataType: string
+		lineageTag: 6382d91c-7aac-430f-a7a1-ff3bc3dd57c5
+		summarizeBy: none
+		sourceColumn: Reseller ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Type'
+		dataType: string
+		lineageTag: 76360b5e-b674-4a73-833b-7f6265696244
+		summarizeBy: none
+		sourceColumn: Business Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Reseller
+		dataType: string
+		lineageTag: 0b9f8a01-0029-474b-a6db-2180c24db725
+		summarizeBy: none
+		sourceColumn: Reseller
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: d73431f0-e34b-4a48-b2a4-14db3f9245e9
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State-Province
+		dataType: string
+		lineageTag: 6c079a13-e26a-4635-9a75-b785710fb2f0
+		summarizeBy: none
+		sourceColumn: State-Province
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country-Region
+		dataType: string
+		lineageTag: d234d524-a372-4291-91bf-ea1c342e9c23
+		summarizeBy: none
+		sourceColumn: Country-Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Postal Code'
+		dataType: string
+		lineageTag: 54958c21-aa63-4ef9-9a7c-474394d6284b
+		summarizeBy: none
+		sourceColumn: Postal Code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Reseller = m
+		mode: import
+		source =
+				let
+				  Source = Excel.Workbook(File.Contents("C:\GIRISH\CODE\GitHubDesktop\Power-BI-File-Formats\DataSource\AdventureWorks Sales.xlsx"), null, true),
+				  #"Navigation 1" = Source{[Item = "Reseller", Kind = "Sheet"]}[Data],
+				  #"Promoted headers" = Table.PromoteHeaders(#"Navigation 1", [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"ResellerKey", Int64.Type}, {"Reseller ID", type text}, {"Business Type", type text}, {"Reseller", type text}, {"City", type text}, {"State-Province", type text}, {"Country-Region", type text}, {"Postal Code", type text}}, "en-US")
+				in
+				  #"Changed column type"
+
+	annotation PBI_ResultType = Table
+

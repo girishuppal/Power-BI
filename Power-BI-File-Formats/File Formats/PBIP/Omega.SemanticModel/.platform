@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Omega"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "53bfc85f-9c7f-4aba-b61b-d01c184118fa"
+  }
+}

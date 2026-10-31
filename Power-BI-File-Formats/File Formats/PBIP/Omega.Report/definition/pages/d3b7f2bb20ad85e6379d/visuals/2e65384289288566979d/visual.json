@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "2e65384289288566979d",
+  "position": {
+    "x": 20.425531914893618,
+    "y": 0,
+    "z": 2,
+    "height": 116.71732522796353,
+    "width": 1867.4772036474164,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Omega Sales Report",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Light",
+                      "fontSize": "54pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
