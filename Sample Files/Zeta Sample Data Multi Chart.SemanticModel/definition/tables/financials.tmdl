@@ -12,6 +12,7 @@ table financials
 	column Country
 		dataType: string
 		lineageTag: f0c235f5-4e88-4a16-acbc-6a9ed9fbe00e
+		dataCategory: Country
 		summarizeBy: none
 		sourceColumn: Country
 
@@ -152,6 +153,17 @@ table financials
 		sourceColumn: Year
 
 		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Product Hierarchy'
+		lineageTag: 6225f6e4-5aae-4bcc-a171-516efe28df58
+
+		level Product
+			lineageTag: d32beeac-8713-4be7-b339-c1ecaa4b575b
+			column: Product
+
+		level Segment
+			lineageTag: 6225b389-6e3e-4d7e-8bf3-32005fd25dae
+			column: Segment
 
 	partition financials = m
 		mode: import

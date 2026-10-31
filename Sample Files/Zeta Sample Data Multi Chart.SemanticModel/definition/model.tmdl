@@ -9,13 +9,14 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["financials"]
+annotation PBI_QueryOrder = ["financials","waterfall-data"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table financials
 ref table DateTableTemplate_93aaec9b-ad07-4b6e-924a-ac61129e59cc
 ref table LocalDateTable_54ca999f-0916-4c51-81a7-4c18317465bf
+ref table waterfall-data
 
 ref cultureInfo en-AU
 

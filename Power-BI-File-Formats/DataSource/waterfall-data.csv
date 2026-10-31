@@ -1,0 +1,11 @@
+Category,Amount,Type
+Gross Revenue,500000,Revenue
+Cost of Goods Sold (COGS),-150000,Expense
+Gross Profit,350000,Subtotal
+Salaries & Wages,-120000,Expense
+Rent & Utilities,-30000,Expense
+Marketing & Sales,-45000,Expense
+Software & IT Support,-15000,Expense
+Operating Income,140000,Subtotal
+Taxes & Insurance,-25000,Expense
+Net Income,115000,Subtotal

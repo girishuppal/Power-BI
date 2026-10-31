@@ -1,0 +1,40 @@
+table waterfall-data
+	lineageTag: a3ae994f-9a67-41a7-94b3-407ed01fba9c
+
+	column Category
+		dataType: string
+		lineageTag: fbd3c69f-1117-4d17-8c57-1d68b21d9ac4
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: int64
+		formatString: 0
+		lineageTag: f0d42c4f-4b5f-4390-b9b7-bb00a224e8ad
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: 002d812b-e8c0-4735-b5a7-8650d1d51a19
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition waterfall-data = m
+		mode: import
+		source =
+				let
+				  Source = Csv.Document(File.Contents("C:\Users\giris\OneDrive\Desktop\waterfall-data.csv"), [Delimiter = ",", Columns = 3, QuoteStyle = QuoteStyle.None]),
+				  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"Category", type text}, {"Amount", Int64.Type}, {"Type", type text}}, "en-US")
+				in
+				  #"Changed column type"
+
+	annotation PBI_ResultType = Table
+
