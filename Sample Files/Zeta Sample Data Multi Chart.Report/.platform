@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Zeta Sample Data Multi Chart"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "45429670-3a2a-4772-ae70-00e4cd572d59"
+  }
+}
