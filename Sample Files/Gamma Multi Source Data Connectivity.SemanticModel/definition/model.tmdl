@@ -9,11 +9,46 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Query1"]
+annotation PBI_QueryOrder = ["UniStudents","DirectQuery to AS - Epsilon","general-population","Work Items - Today","Bugs - Today","Stories - Today","Work Items - Last 30 days","Bugs - Last 30 days","Stories - Last 30 days","Work Items - Last 26 weeks","Bugs - Last 26 weeks","Stories - Last 26 weeks","Work Items - All history by month","Bugs - All history by month","Stories - All history by month","Tasks - Today","Tasks - Last 30 days","Tasks - Last 26 weeks","Tasks - All history by month","SalesLT Customer","microsoft-fy27-results"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table Query1
+ref table UniStudents
+ref table financials
+ref table LocalDateTable_9ac79b9e-e05b-4bc5-b31b-03c69545a094
+ref table general-population
+ref table 'Work Items - Today'
+ref table 'Bugs - Today'
+ref table 'Stories - Today'
+ref table 'Work Items - Last 30 days'
+ref table DateTableTemplate_d67d7f94-606d-4e14-8619-7351d590d7ad
+ref table LocalDateTable_d83b0194-4e64-408f-b394-118810ab2af2
+ref table 'Bugs - Last 30 days'
+ref table LocalDateTable_ca14eb3e-bd5c-4eda-ba14-fe42e3dbd98f
+ref table 'Stories - Last 30 days'
+ref table LocalDateTable_12a7776f-6e25-46d2-8f7c-cb521c452b39
+ref table 'Work Items - Last 26 weeks'
+ref table LocalDateTable_2d1c2ece-b65b-4ba4-a9d2-368944c40480
+ref table 'Bugs - Last 26 weeks'
+ref table LocalDateTable_125af64d-66d7-432c-80d7-a47981e88c49
+ref table 'Stories - Last 26 weeks'
+ref table LocalDateTable_058e2b68-24d8-4f93-92e7-2b7e90b9e140
+ref table 'Work Items - All history by month'
+ref table LocalDateTable_70b70e4a-cb47-4877-9a12-24cf6ace56fd
+ref table 'Bugs - All history by month'
+ref table LocalDateTable_d43f0f4b-217c-43c8-aa53-fe57eb42032f
+ref table 'Stories - All history by month'
+ref table LocalDateTable_f8c5cd4a-91e6-4529-b35b-a92fa2cc3fa7
+ref table 'Tasks - Today'
+ref table 'Tasks - Last 30 days'
+ref table LocalDateTable_9d7a1be1-826f-427f-80ac-f24005e9faf8
+ref table 'Tasks - Last 26 weeks'
+ref table LocalDateTable_7456ba45-b16a-4fc7-ba2f-38ecce5d3906
+ref table 'Tasks - All history by month'
+ref table LocalDateTable_41ba5195-dd85-49d3-a5a0-8bf3d957752d
+ref table 'SalesLT Customer'
+ref table LocalDateTable_c451fe65-becd-4864-aaf7-b7085c1eeb9c
+ref table microsoft-fy27-results
 
 ref cultureInfo en-AU
 

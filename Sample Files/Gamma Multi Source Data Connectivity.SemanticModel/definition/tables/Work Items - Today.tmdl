@@ -1,0 +1,71 @@
+table 'Work Items - Today'
+	lineageTag: 9da74485-6506-4662-b684-455373d3db80
+
+	column 'Area Path'
+		dataType: string
+		lineageTag: cd51d9ac-76ec-4090-bd65-28139b50ce37
+		summarizeBy: none
+		sourceColumn: Area Path
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Assigned To'
+		dataType: string
+		lineageTag: f281dfba-1678-4e34-b915-7410cd9606b4
+		summarizeBy: none
+		sourceColumn: Assigned To
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Iteration Path'
+		dataType: string
+		lineageTag: 7b9d47f5-ae99-4b8d-9c1f-b8004be9e646
+		summarizeBy: none
+		sourceColumn: Iteration Path
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Work Item Id'
+		dataType: int64
+		formatString: 0
+		lineageTag: a7ae74b2-3f9b-4984-9575-2db009ff4bbe
+		summarizeBy: none
+		sourceColumn: Work Item Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: a78ac996-ce1d-45d0-948d-98386167b81c
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: 2bf05949-944b-4e8e-aef8-9a15ccc6cb18
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Work Item Type'
+		dataType: string
+		lineageTag: e0b86da8-321d-40bc-ac49-c681c41e7591
+		summarizeBy: none
+		sourceColumn: Work Item Type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Work Items - Today' = m
+		mode: import
+		source =
+				let
+				  Source = VSTS.AnalyticsViews("GirishMVP", "AI Training for Council", []),
+				  #"Navigation 1" = Source{[Id = "57393ba4-b2b3-4a3b-83f4-ead02e759105", Kind = "Table"]}[Data]
+				in
+				  #"Navigation 1"
+
+	annotation PBI_ResultType = Table
+

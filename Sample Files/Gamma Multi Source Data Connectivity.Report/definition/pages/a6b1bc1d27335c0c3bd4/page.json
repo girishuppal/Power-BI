@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "a6b1bc1d27335c0c3bd4",
+  "displayName": "AzureDevOps",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920
+}

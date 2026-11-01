@@ -1,0 +1,184 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "83b8b7e3c0cad56949b6",
+  "position": {
+    "x": 31.389645776566756,
+    "y": 40.108991825613074,
+    "z": 0,
+    "height": 974.82288828337869,
+    "width": 1862.4523160762942,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "sankey02300D1BE6F5427989F3DE31CCA9E0F32020",
+    "query": {
+      "queryState": {
+        "Source": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "microsoft-fy27-results"
+                    }
+                  },
+                  "Property": "Source"
+                }
+              },
+              "queryRef": "microsoft-fy27-results.Source",
+              "nativeQueryRef": "Source"
+            }
+          ]
+        },
+        "Destination": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "microsoft-fy27-results"
+                    }
+                  },
+                  "Property": "Target"
+                }
+              },
+              "queryRef": "microsoft-fy27-results.Target",
+              "nativeQueryRef": "Target"
+            }
+          ]
+        },
+        "Weight": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "microsoft-fy27-results"
+                        }
+                      },
+                      "Property": "Value"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(microsoft-fy27-results.Value)",
+              "nativeQueryRef": "Sum of Value"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "linkLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "scaleSettings": [
+        {
+          "properties": {
+            "lnScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "nodeComplexSettings": [
+        {
+          "properties": {
+            "linksReorder": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3353f4bb093a09a05942",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "microsoft-fy27-results"
+              }
+            },
+            "Property": "Source"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bf1636ed0ded3e4c8bb1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "microsoft-fy27-results"
+              }
+            },
+            "Property": "Target"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c94b4d7d57800e69059e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "microsoft-fy27-results"
+                  }
+                },
+                "Property": "Value"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

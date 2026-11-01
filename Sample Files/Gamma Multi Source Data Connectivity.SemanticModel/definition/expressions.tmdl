@@ -1,0 +1,11 @@
+expression 'DirectQuery to AS - Epsilon' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/ADO%20Alpha", "Epsilon"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 7c187010-f694-4399-aa6b-150a606e3f66
+
+	annotation PBI_IncludeFutureArtifacts = True
+

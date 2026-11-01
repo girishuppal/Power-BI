@@ -1,0 +1,182 @@
+table financials
+	lineageTag: 019b19d0-26fb-4d58-bec4-a66e85ac7dee
+	sourceLineageTag: 047a81de-1dc4-4908-8193-451b8157973d
+
+	column Segment
+		dataType: string
+		lineageTag: ba5f01d5-152a-4ec1-b26f-712bbfe4c1b7
+		sourceLineageTag: 44c26ea1-5c28-4f00-be03-ea3cad621980
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = User
+
+	column Country
+		dataType: string
+		lineageTag: 9cd9de5b-8604-4453-b044-3ef9a3891888
+		sourceLineageTag: de1daf14-680e-4a46-abef-de2367ef4b49
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = User
+
+	column Product
+		dataType: string
+		lineageTag: 87e4de88-1481-4611-aca0-a64c86f91483
+		sourceLineageTag: 3897603e-1f1d-4793-8a2a-f24f468ab10a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = User
+
+	column 'Discount Band'
+		dataType: string
+		lineageTag: 7f9f8c3f-0268-45e1-a485-649973ecb51c
+		sourceLineageTag: 4cc10de2-27b2-41b0-bdac-9d37ba535569
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Discount Band
+
+		annotation SummarizationSetBy = User
+
+	column 'Units Sold'
+		dataType: double
+		lineageTag: 49ca5d8b-0d2c-4d2e-9157-5ad485022c36
+		sourceLineageTag: 6279e9b8-9512-4c02-bd5d-094c676158a0
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Units Sold
+
+		annotation SummarizationSetBy = User
+
+	column 'Manufacturing Price'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4cfb77d7-ede3-4d37-bba0-038a6800c63e
+		sourceLineageTag: 48090b7a-73f3-40f9-a8e4-d2ef1098d4c1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Manufacturing Price
+
+		annotation SummarizationSetBy = User
+
+	column 'Sale Price'
+		dataType: int64
+		formatString: 0
+		lineageTag: ae6257ae-4ce1-4867-be26-540fb4efb565
+		sourceLineageTag: ddeaf0d2-d522-409e-a0f0-efcb0b601032
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Sale Price
+
+		annotation SummarizationSetBy = User
+
+	column 'Gross Sales'
+		dataType: double
+		lineageTag: 376febc2-5b76-4eb0-89c1-66cb0034b8ff
+		sourceLineageTag: 458ff111-85d5-4435-87a4-0a3faa25d88f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Gross Sales
+
+		annotation SummarizationSetBy = User
+
+	column Discounts
+		dataType: double
+		lineageTag: 034f5b73-0d61-4daf-9baf-e1a4fea978aa
+		sourceLineageTag: 73364066-be2b-4004-84f9-739d74fde0cd
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Discounts
+
+		annotation SummarizationSetBy = User
+
+	column Sales
+		dataType: double
+		lineageTag: 59c8a652-7ee4-489c-bf3f-6c00790beedb
+		sourceLineageTag: 1e53d780-62bd-41b3-94c7-8ecec3505dc6
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Sales
+
+		annotation SummarizationSetBy = User
+
+	column COGS
+		dataType: double
+		lineageTag: a8168aba-4c59-45f4-a133-d20d2750f29a
+		sourceLineageTag: 8251c6c8-35f3-40c8-8240-34eb35e261d8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: COGS
+
+		annotation SummarizationSetBy = User
+
+	column Profit
+		dataType: double
+		lineageTag: 67bf3a81-1790-48b0-a896-e665ccbaa98a
+		sourceLineageTag: f8d4b81a-bf90-488f-87df-d0a6a68b1786
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Profit
+
+		annotation SummarizationSetBy = User
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 14bace41-b104-418f-a33f-9088819ca63e
+		sourceLineageTag: 446b85ee-0f2a-4420-91f2-875e307f8543
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 9780c5e6-cf84-42c9-b763-8d039e02b1a8
+			defaultHierarchy: LocalDateTable_9ac79b9e-e05b-4bc5-b31b-03c69545a094.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column 'Month Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6eb2f1d7-bc6a-4372-a867-9bd0dc8ba4e7
+		sourceLineageTag: 9d0a7525-8134-433e-92f8-c175d0a6e3a4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Month Number
+
+		annotation SummarizationSetBy = User
+
+	column 'Month Name'
+		dataType: string
+		lineageTag: bd20175b-89e4-4671-824f-e412c2eddd6e
+		sourceLineageTag: a9fa8eee-670c-4890-a6bb-45dc58bb0af9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Month Name
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 28d86663-85ba-4db2-a6ca-c26f91cd4600
+		sourceLineageTag: 773fd3c5-c4fd-4f6a-a810-68f1781e0e5e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	partition financials = entity
+		mode: directQuery
+		source
+			entityName: financials
+			expressionSource: 'DirectQuery to AS - Epsilon'
+
+	annotation PBI_ResultType = Exception
+

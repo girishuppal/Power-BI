@@ -1,0 +1,81 @@
+table general-population
+	lineageTag: b68bf80c-b297-403c-a105-e3ec16d2ac2d
+
+	column Country
+		dataType: string
+		lineageTag: b1495edd-3da1-43fd-8209-389c62b07af2
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Capital
+		dataType: string
+		lineageTag: dcb359fd-8990-4085-bef3-14ddbefb2b8a
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: Capital
+
+		annotation SummarizationSetBy = Automatic
+
+	column Currency
+		dataType: string
+		lineageTag: af523366-d2de-4204-87cd-cecc0b5e014a
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column Population
+		dataType: int64
+		formatString: 0
+		lineageTag: 19efe5f5-458f-4e29-b93d-1c668e5848c6
+		summarizeBy: sum
+		sourceColumn: Population
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column GDP
+		dataType: string
+		lineageTag: bc0656fe-a796-40a9-aaa4-2421b7b14ec2
+		summarizeBy: none
+		sourceColumn: GDP
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Economy Ranking'
+		dataType: int64
+		formatString: 0
+		lineageTag: e61f821c-98e8-4c93-a7f3-e240564013c8
+		summarizeBy: sum
+		sourceColumn: Economy Ranking
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Number of Millionaires'
+		dataType: int64
+		formatString: 0
+		lineageTag: 00497a95-a530-4a70-abd3-826401f050cb
+		summarizeBy: sum
+		sourceColumn: Number of Millionaires
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition general-population = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("ippvgv2jqwbefedfjotu53cf7m-h2wrruthf3zu5cweoe3yblovay.datawarehouse.fabric.microsoft.com", "Germany"),
+				    #"dbo_general-population" = Source{[Schema="dbo",Item="general-population"]}[Data]
+				in
+				    #"dbo_general-population"
+
+	annotation PBI_ResultType = Table
+

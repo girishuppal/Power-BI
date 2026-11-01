@@ -1,0 +1,96 @@
+table 'Bugs - Last 30 days'
+	lineageTag: 6b6162d1-8dee-4110-9d2c-446dd9b0bcbb
+
+	column 'Area Path'
+		dataType: string
+		lineageTag: fb14ba91-5096-499e-b6e4-d9713fb5c566
+		summarizeBy: none
+		sourceColumn: Area Path
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Assigned To'
+		dataType: string
+		lineageTag: ebf1fd10-52ea-4e2d-9bdd-dd785467d25a
+		summarizeBy: none
+		sourceColumn: Assigned To
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Iteration Path'
+		dataType: string
+		lineageTag: 421d3680-8271-47c0-8938-ba1e9a690f5c
+		summarizeBy: none
+		sourceColumn: Iteration Path
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Work Item Id'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d0934fa-e4f4-4e77-9f3d-cab9e345a34e
+		summarizeBy: none
+		sourceColumn: Work Item Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 2188a91f-7456-4505-a39d-c69bc32e164d
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: fa4aff00-6784-451c-a39c-952dd37e7cfd
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Work Item Type'
+		dataType: string
+		lineageTag: 0a9fc15a-c813-4412-a06c-582043d67961
+		summarizeBy: none
+		sourceColumn: Work Item Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7e9672d9-7059-41a3-baf3-49165387cfa9
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 33548eac-ca1b-4976-b8ca-a98731de2386
+			defaultHierarchy: LocalDateTable_ca14eb3e-bd5c-4eda-ba14-fe42e3dbd98f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Is Current'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d81d53bf-d351-40ee-b30b-ae5807c873b5
+		summarizeBy: none
+		sourceColumn: Is Current
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Bugs - Last 30 days' = m
+		mode: import
+		source =
+				let
+				  Source = VSTS.AnalyticsViews("GirishMVP", "AI Training for Council", []),
+				  #"Navigation 1" = Source{[Id = "83c50c31-ae2d-4784-b9a7-427cc48af984", Kind = "Table"]}[Data]
+				in
+				  #"Navigation 1"
+
+	annotation PBI_ResultType = Table
+

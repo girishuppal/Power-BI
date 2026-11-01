@@ -1,0 +1,40 @@
+table microsoft-fy27-results
+	lineageTag: 7aadec92-08c4-4f4d-be50-089bfce06294
+
+	column Source
+		dataType: string
+		lineageTag: 547ac216-80cb-46eb-8ec9-839e1ff0f355
+		summarizeBy: none
+		sourceColumn: Source
+
+		annotation SummarizationSetBy = Automatic
+
+	column Target
+		dataType: string
+		lineageTag: e02daa2e-a66a-432a-bd46-4eb6f5878044
+		summarizeBy: none
+		sourceColumn: Target
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 8b459f55-af0d-4ea5-a7de-6d514038f0e6
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+	partition microsoft-fy27-results = m
+		mode: import
+		source =
+				let
+				  Source = Csv.Document(File.Contents("C:\Users\giris\OneDrive\Desktop\microsoft-fy27-results.csv"), [Delimiter = ",", Columns = 3, QuoteStyle = QuoteStyle.None]),
+				  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"Source", type text}, {"Target", type text}, {"Value", Currency.Type}}, "en-US")
+				in
+				  #"Changed column type"
+
+	annotation PBI_ResultType = Table
+

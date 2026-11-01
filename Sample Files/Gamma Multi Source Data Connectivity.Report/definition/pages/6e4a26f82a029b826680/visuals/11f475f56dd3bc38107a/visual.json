@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Query1"
+                      "Entity": "UniStudents"
                     }
                   },
                   "Property": "Name"
@@ -34,7 +34,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Query1"
+                      "Entity": "UniStudents"
                     }
                   },
                   "Property": "Age"
@@ -48,7 +48,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Query1"
+                      "Entity": "UniStudents"
                     }
                   },
                   "Property": "Salary"
@@ -112,51 +112,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4eae236a14d0904182d0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Query1"
-              }
-            },
-            "Property": "Name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b7b3d5df24e1cc00590e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Query1"
-              }
-            },
-            "Property": "Age"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0c1a6b7337ea07728372",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Query1"
-              }
-            },
-            "Property": "Salary"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

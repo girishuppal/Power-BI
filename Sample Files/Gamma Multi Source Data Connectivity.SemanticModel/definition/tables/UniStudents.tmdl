@@ -1,4 +1,4 @@
-table Query1
+table UniStudents
 	lineageTag: 39d8f4e7-d6c8-4e80-80dd-4b9b52c5dc79
 
 	column Name
@@ -31,7 +31,7 @@ table Query1
 
 		annotation SummarizationSetBy = Automatic
 
-	partition Query1 = m
+	partition UniStudents = m
 		mode: import
 		source = ```
 				let

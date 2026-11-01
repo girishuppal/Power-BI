@@ -1,0 +1,96 @@
+table 'Work Items - All history by month'
+	lineageTag: d329fde0-5814-41c0-83af-833a4e99c38c
+
+	column 'Area Path'
+		dataType: string
+		lineageTag: 98e8140b-87a1-4e62-8c88-5275bc1c707a
+		summarizeBy: none
+		sourceColumn: Area Path
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Assigned To'
+		dataType: string
+		lineageTag: bf98b61e-c328-421d-abd7-7bf3a3b1fdff
+		summarizeBy: none
+		sourceColumn: Assigned To
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Iteration Path'
+		dataType: string
+		lineageTag: 292068a1-c8c3-4c34-a31d-b3f854a55bca
+		summarizeBy: none
+		sourceColumn: Iteration Path
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Work Item Id'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0df9829d-2f33-40a4-ba5b-dd1519de8ba0
+		summarizeBy: count
+		sourceColumn: Work Item Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: e3b030b7-8aa7-4f5e-9289-ef0040c1cb63
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: fc05571d-ba18-4e61-a2bf-c42c542257ec
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Work Item Type'
+		dataType: string
+		lineageTag: debe4f88-8092-4672-8117-72568562c904
+		summarizeBy: none
+		sourceColumn: Work Item Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3a796614-ec69-49f1-9e34-c4259275731f
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 666f69b4-7816-40ef-aa0a-2b8790a39990
+			defaultHierarchy: LocalDateTable_70b70e4a-cb47-4877-9a12-24cf6ace56fd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Is Current'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 98f7691d-4a44-4560-beb3-d1c4cb2db667
+		summarizeBy: none
+		sourceColumn: Is Current
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Work Items - All history by month' = m
+		mode: import
+		source =
+				let
+				  Source = VSTS.AnalyticsViews("GirishMVP", "AI Training for Council", []),
+				  #"Navigation 1" = Source{[Id = "a3d69f30-4944-43b0-80a5-dc6da424ced2", Kind = "Table"]}[Data]
+				in
+				  #"Navigation 1"
+
+	annotation PBI_ResultType = Table
+

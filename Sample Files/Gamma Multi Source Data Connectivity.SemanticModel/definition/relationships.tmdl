@@ -1,0 +1,212 @@
+relationship 9780c5e6-cf84-42c9-b763-8d039e02b1a8
+	fromColumn: financials.Date
+	toColumn: LocalDateTable_9ac79b9e-e05b-4bc5-b31b-03c69545a094.Date
+
+relationship 5bc21f26-b8d5-4e90-8195-9518407a93bd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Work Items - Last 30 days'.Date
+	toColumn: LocalDateTable_d83b0194-4e64-408f-b394-118810ab2af2.Date
+
+relationship 33548eac-ca1b-4976-b8ca-a98731de2386
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Bugs - Last 30 days'.Date
+	toColumn: LocalDateTable_ca14eb3e-bd5c-4eda-ba14-fe42e3dbd98f.Date
+
+relationship e8f584ae-a653-4e40-92e8-ffc3dcbe9c07
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Stories - Last 30 days'.Date
+	toColumn: LocalDateTable_12a7776f-6e25-46d2-8f7c-cb521c452b39.Date
+
+relationship 66f85237-5f37-42c3-b49d-a7e1711a882f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Work Items - Last 26 weeks'.Date
+	toColumn: LocalDateTable_2d1c2ece-b65b-4ba4-a9d2-368944c40480.Date
+
+relationship ff23f0e8-f307-4be1-aed4-9667d2147e2c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Bugs - Last 26 weeks'.Date
+	toColumn: LocalDateTable_125af64d-66d7-432c-80d7-a47981e88c49.Date
+
+relationship 4a7e58b2-5ad6-44a2-9615-089ce9beccc7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Stories - Last 26 weeks'.Date
+	toColumn: LocalDateTable_058e2b68-24d8-4f93-92e7-2b7e90b9e140.Date
+
+relationship 666f69b4-7816-40ef-aa0a-2b8790a39990
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Work Items - All history by month'.Date
+	toColumn: LocalDateTable_70b70e4a-cb47-4877-9a12-24cf6ace56fd.Date
+
+relationship 854984ec-c5b5-474b-b270-32b9def2c9bc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Bugs - All history by month'.Date
+	toColumn: LocalDateTable_d43f0f4b-217c-43c8-aa53-fe57eb42032f.Date
+
+relationship cf4576b6-5edc-4cab-b6fb-a7b9ca5d4c4d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Stories - All history by month'.Date
+	toColumn: LocalDateTable_f8c5cd4a-91e6-4529-b35b-a92fa2cc3fa7.Date
+
+relationship 65e04cc7-232f-426d-9606-37da4a4a37e3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Tasks - Last 30 days'.Date
+	toColumn: LocalDateTable_9d7a1be1-826f-427f-80ac-f24005e9faf8.Date
+
+relationship 983a89f8-cf2b-430f-a3fb-1eadb7baea37
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Tasks - Last 26 weeks'.Date
+	toColumn: LocalDateTable_7456ba45-b16a-4fc7-ba2f-38ecce5d3906.Date
+
+relationship 2297ad0b-63a9-4b95-8a52-be26b377f3dc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Tasks - All history by month'.Date
+	toColumn: LocalDateTable_41ba5195-dd85-49d3-a5a0-8bf3d957752d.Date
+
+relationship AutoDetected_c30397c8-342c-446b-8d08-709ad900bba5
+	fromColumn: 'Bugs - Last 30 days'.'Area Path'
+	toColumn: 'Bugs - Today'.'Area Path'
+
+relationship AutoDetected_e97b295b-c5e7-4fa5-b5d7-a23cb08b3896
+	fromColumn: 'Bugs - Last 26 weeks'.'Area Path'
+	toColumn: 'Bugs - Today'.'Area Path'
+
+relationship AutoDetected_4ef6640b-6977-44a6-ac38-e233975bf7ab
+	fromColumn: 'Bugs - All history by month'.'Area Path'
+	toColumn: 'Bugs - Today'.'Area Path'
+
+relationship AutoDetected_d86293a1-e1cc-4a1b-8049-ba8b0409da51
+	fromColumn: 'Work Items - Today'.'Area Path'
+	toColumn: 'Stories - Today'.'Area Path'
+
+relationship AutoDetected_f539c19d-94f2-406b-a324-a796bf0ff393
+	fromColumn: 'Work Items - Last 30 days'.'Area Path'
+	toColumn: 'Stories - Today'.'Area Path'
+
+relationship AutoDetected_ce0c1d77-b8c7-4684-b46a-8fb3fae5f44c
+	fromColumn: 'Stories - Last 30 days'.'Area Path'
+	toColumn: 'Stories - Today'.'Area Path'
+
+relationship AutoDetected_de767b49-237e-48f3-8a6a-f6cc336e3958
+	fromColumn: 'Work Items - Last 26 weeks'.'Area Path'
+	toColumn: 'Stories - Today'.'Area Path'
+
+relationship AutoDetected_ff523cd2-6dfc-4a33-bbed-2c31bd31b088
+	fromColumn: 'Stories - Last 26 weeks'.'Area Path'
+	toColumn: 'Stories - Today'.'Area Path'
+
+relationship AutoDetected_9c872a7c-bdab-4749-b0c7-ec64f6bd2a67
+	fromColumn: 'Work Items - All history by month'.'Area Path'
+	toColumn: 'Stories - Today'.'Area Path'
+
+relationship AutoDetected_b7368325-7a3c-4cda-a9eb-723872cb35a4
+	fromColumn: 'Stories - All history by month'.'Area Path'
+	toColumn: 'Stories - Today'.'Area Path'
+
+relationship AutoDetected_e85cef92-e0cc-4198-94e0-8fe1298cd82a
+	fromColumn: 'Tasks - Today'.'Area Path'
+	toColumn: 'Stories - Today'.'Area Path'
+
+relationship AutoDetected_24d0c103-2893-4ce4-8ee8-3bc1061b8b44
+	fromColumn: 'Tasks - Last 30 days'.'Area Path'
+	toColumn: 'Stories - Today'.'Area Path'
+
+relationship AutoDetected_47facd32-6dd9-49d0-a897-67446567ff3c
+	fromColumn: 'Tasks - Last 26 weeks'.'Area Path'
+	toColumn: 'Stories - Today'.'Area Path'
+
+relationship AutoDetected_9e8fc647-c063-436e-81f0-3ef44988da78
+	fromColumn: 'Tasks - All history by month'.'Area Path'
+	toColumn: 'Stories - Today'.'Area Path'
+
+relationship AutoDetected_ceed6b5a-b452-469d-a2fc-1a86e861f598
+	isActive: false
+	fromColumn: 'Work Items - Last 30 days'.'Work Item Id'
+	toColumn: 'Work Items - Today'.'Work Item Id'
+
+relationship AutoDetected_ba72148a-01ad-4bbd-8da9-338f58e62b41
+	fromColumn: 'Bugs - Last 30 days'.'Work Item Id'
+	toColumn: 'Work Items - Today'.'Work Item Id'
+
+relationship AutoDetected_f1a05a85-6042-4ecc-b87e-264e2e7f494a
+	isActive: false
+	fromColumn: 'Stories - Last 30 days'.'Work Item Id'
+	toColumn: 'Work Items - Today'.'Work Item Id'
+
+relationship AutoDetected_a565699a-17d8-4824-b12e-a02d11926c4b
+	isActive: false
+	fromColumn: 'Work Items - Last 26 weeks'.'Work Item Id'
+	toColumn: 'Work Items - Today'.'Work Item Id'
+
+relationship AutoDetected_697b3565-9754-403e-bdc7-f10814029698
+	fromColumn: 'Bugs - Last 26 weeks'.'Work Item Id'
+	toColumn: 'Work Items - Today'.'Work Item Id'
+
+relationship AutoDetected_a508fa70-453e-4b60-851d-e46714e3b61a
+	isActive: false
+	fromColumn: 'Stories - Last 26 weeks'.'Work Item Id'
+	toColumn: 'Work Items - Today'.'Work Item Id'
+
+relationship AutoDetected_126d032a-ae75-4178-ae4c-68e47921d8dc
+	isActive: false
+	fromColumn: 'Work Items - All history by month'.'Work Item Id'
+	toColumn: 'Work Items - Today'.'Work Item Id'
+
+relationship AutoDetected_df9506fd-842f-4456-a164-d90dd4539371
+	fromColumn: 'Bugs - All history by month'.'Work Item Id'
+	toColumn: 'Work Items - Today'.'Work Item Id'
+
+relationship AutoDetected_7f1ffeb2-ed1e-4ccd-91de-22df3fb9adab
+	isActive: false
+	fromColumn: 'Stories - All history by month'.'Work Item Id'
+	toColumn: 'Work Items - Today'.'Work Item Id'
+
+relationship AutoDetected_6ff13cb4-e51a-492e-8f86-bca92eb25967
+	isActive: false
+	fromColumn: 'Tasks - Last 30 days'.'Work Item Id'
+	toColumn: 'Work Items - Today'.'Work Item Id'
+
+relationship AutoDetected_18cfc4b5-3a20-45b0-b445-d3d988ec43c7
+	isActive: false
+	fromColumn: 'Tasks - Last 26 weeks'.'Work Item Id'
+	toColumn: 'Work Items - Today'.'Work Item Id'
+
+relationship AutoDetected_0a87aeb1-7464-4b76-ab1b-bc2c53750b4b
+	isActive: false
+	fromColumn: 'Tasks - All history by month'.'Work Item Id'
+	toColumn: 'Work Items - Today'.'Work Item Id'
+
+relationship AutoDetected_2b82d2b6-e177-4dec-8bcc-0822e47823c2
+	isActive: false
+	fromColumn: 'Work Items - Last 30 days'.'Work Item Id'
+	toColumn: 'Tasks - Today'.'Work Item Id'
+
+relationship AutoDetected_856d4f89-dad9-4c8b-a03c-748f49c340a8
+	isActive: false
+	fromColumn: 'Work Items - Last 26 weeks'.'Work Item Id'
+	toColumn: 'Tasks - Today'.'Work Item Id'
+
+relationship AutoDetected_525c82cb-6f29-4de4-b978-a234b2b2bb5e
+	isActive: false
+	fromColumn: 'Work Items - All history by month'.'Work Item Id'
+	toColumn: 'Tasks - Today'.'Work Item Id'
+
+relationship AutoDetected_5de59ee6-96ff-4b7e-b585-28955c0478e9
+	isActive: false
+	fromColumn: 'Tasks - Last 30 days'.'Work Item Id'
+	toColumn: 'Tasks - Today'.'Work Item Id'
+
+relationship AutoDetected_a3e293b4-7e0c-4272-b7bb-a3eff08a59de
+	isActive: false
+	fromColumn: 'Tasks - Last 26 weeks'.'Work Item Id'
+	toColumn: 'Tasks - Today'.'Work Item Id'
+
+relationship AutoDetected_791a79ad-08bd-4dd6-9178-0cc095108495
+	isActive: false
+	fromColumn: 'Tasks - All history by month'.'Work Item Id'
+	toColumn: 'Tasks - Today'.'Work Item Id'
+
+relationship 6d948766-0a99-479a-a436-c3a1087b3cd4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'SalesLT Customer'.ModifiedDate
+	toColumn: LocalDateTable_c451fe65-becd-4864-aaf7-b7085c1eeb9c.Date
+
