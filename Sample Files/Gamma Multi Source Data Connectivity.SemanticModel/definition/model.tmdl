@@ -9,7 +9,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["UniStudents","DirectQuery to AS - Epsilon","general-population","Work Items - Today","Bugs - Today","Stories - Today","Work Items - Last 30 days","Bugs - Last 30 days","Stories - Last 30 days","Work Items - Last 26 weeks","Bugs - Last 26 weeks","Stories - Last 26 weeks","Work Items - All history by month","Bugs - All history by month","Stories - All history by month","Tasks - Today","Tasks - Last 30 days","Tasks - Last 26 weeks","Tasks - All history by month","SalesLT Customer","microsoft-fy27-results"]
+annotation PBI_QueryOrder = ["UniStudents","DirectQuery to AS - Epsilon","general-population","Work Items - Today","Bugs - Today","Stories - Today","Work Items - Last 30 days","Bugs - Last 30 days","Stories - Last 30 days","Work Items - Last 26 weeks","Bugs - Last 26 weeks","Stories - Last 26 weeks","Work Items - All history by month","Bugs - All history by month","Stories - All history by month","Tasks - Today","Tasks - Last 30 days","Tasks - Last 26 weeks","Tasks - All history by month","SalesLT Customer","microsoft-fy27-results","accounts"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -49,6 +49,14 @@ ref table LocalDateTable_41ba5195-dd85-49d3-a5a0-8bf3d957752d
 ref table 'SalesLT Customer'
 ref table LocalDateTable_c451fe65-becd-4864-aaf7-b7085c1eeb9c
 ref table microsoft-fy27-results
+ref table accounts
+ref table LocalDateTable_e0f836fb-185f-4f51-a00e-2a7b2fd81320
+ref table LocalDateTable_75d6c9ad-92e9-4e3d-9dd5-e019be1bba2c
+ref table LocalDateTable_2bd37688-dd80-494d-b03a-7d8b59788738
+ref table LocalDateTable_2475ef7d-12ff-4e33-bccc-6fee3eab658c
+ref table LocalDateTable_30bcd61d-4662-41ec-9471-f35620c5ca62
+ref table LocalDateTable_7690a7c6-fece-4792-96c7-9453da783082
+ref table LocalDateTable_71b75e3a-c0ae-49bb-bcf5-62f03751325a
 
 ref cultureInfo en-AU
 

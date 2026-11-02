@@ -210,3 +210,38 @@ relationship 6d948766-0a99-479a-a436-c3a1087b3cd4
 	fromColumn: 'SalesLT Customer'.ModifiedDate
 	toColumn: LocalDateTable_c451fe65-becd-4864-aaf7-b7085c1eeb9c.Date
 
+relationship a0adcc17-2f6c-4d5a-a3ba-8bf1c6638e13
+	joinOnDateBehavior: datePartOnly
+	fromColumn: accounts.createdon
+	toColumn: LocalDateTable_e0f836fb-185f-4f51-a00e-2a7b2fd81320.Date
+
+relationship 63eed4ad-7ab3-4f5e-b380-9891a67bd6c8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: accounts.overriddencreatedon
+	toColumn: LocalDateTable_75d6c9ad-92e9-4e3d-9dd5-e019be1bba2c.Date
+
+relationship d5f2fe0f-5118-40ed-89bd-90902771f856
+	joinOnDateBehavior: datePartOnly
+	fromColumn: accounts.openrevenue_date
+	toColumn: LocalDateTable_2bd37688-dd80-494d-b03a-7d8b59788738.Date
+
+relationship cfebf03e-7945-4152-9eeb-bb90f9c73982
+	joinOnDateBehavior: datePartOnly
+	fromColumn: accounts.opendeals_date
+	toColumn: LocalDateTable_2475ef7d-12ff-4e33-bccc-6fee3eab658c.Date
+
+relationship 4eef4578-5bf2-47f4-ae6f-0373bb92be7b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: accounts.lastonholdtime
+	toColumn: LocalDateTable_30bcd61d-4662-41ec-9471-f35620c5ca62.Date
+
+relationship 4660afc7-8dab-48d9-abea-7468213730df
+	joinOnDateBehavior: datePartOnly
+	fromColumn: accounts.lastusedincampaign
+	toColumn: LocalDateTable_7690a7c6-fece-4792-96c7-9453da783082.Date
+
+relationship f496ea7c-c0bd-45f9-96ca-fcc9ad8f5833
+	joinOnDateBehavior: datePartOnly
+	fromColumn: accounts.modifiedon
+	toColumn: LocalDateTable_71b75e3a-c0ae-49bb-bcf5-62f03751325a.Date
+
